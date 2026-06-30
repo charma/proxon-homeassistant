@@ -1,0 +1,123 @@
+modbus:
+  - name: proxon
+    type: tcp
+    host: 192.168.1.24
+    port: 502
+    delay: 1
+    switches:
+      - name: "Modbus Proxon Kuehlung"
+        unique_id: modbus_proxon_kuehlung
+        slave: 41
+        address: 62
+        scan_interval: 30
+        verify:
+          delay: 1
+    sensors:
+      - name: "Modbus Proxon CO2 PPM"
+        unique_id: modbus_proxon_co2_ppm
+        input_type: input
+        slave: 41
+        address: 21
+        scan_interval: 30
+        device_class: carbon_monoxide
+        state_class: measurement
+        unit_of_measurement: ppm
+        data_type: int16
+      - name: "Modbus Proxon Relative Luftfeuchte"
+        unique_id: modbus_proxon_luftfeuchte
+        input_type: input
+        slave: 41
+        address: 22
+        scan_interval: 30
+        device_class: humidity
+        state_class: measurement
+        unit_of_measurement: "%"
+        data_type: int16
+      - name: "Modbus Proxon Temperatur Aussen"
+        unique_id: modbus_proxon_temp_aussen
+        input_type: input
+        slave: 41
+        address: 198
+        scan_interval: 30
+        device_class: temperature
+        state_class: measurement
+        unit_of_measurement: °C
+        data_type: int16
+        scale: 0.01
+        precision: 1
+      - name: "Modbus Proxon Temperatur Wohnen"
+        unique_id: modbus_proxon_temp_wohnen
+        input_type: input
+        slave: 41
+        address: 41
+        scan_interval: 30
+        device_class: temperature
+        state_class: measurement
+        unit_of_measurement: °C
+        data_type: int16
+        scale: 0.01
+        precision: 1
+      - name: "Modbus Proxon Temperatur Buero"
+        unique_id: modbus_proxon_temp_buero
+        input_type: input
+        slave: 41
+        address: 590
+        scan_interval: 30
+        device_class: temperature
+        state_class: measurement
+        unit_of_measurement: °C
+        data_type: int16
+        scale: 0.1
+        precision: 1
+      - name: "Modbus Proxon Temperatur Diele"
+        unique_id: modbus_proxon_temp_diele
+        input_type: input
+        slave: 41
+        address: 593
+        scan_interval: 30
+        device_class: temperature
+        state_class: measurement
+        unit_of_measurement: °C
+        data_type: int16
+        scale: 0.1
+        precision: 1
+      - name: "Modbus Proxon Temperatur Schlafen"
+        unique_id: modbus_proxon_temp_schlafen
+        input_type: input
+        slave: 41
+        address: 596
+        scan_interval: 30
+        device_class: temperature
+        state_class: measurement
+        unit_of_measurement: °C
+        data_type: int16
+        scale: 0.1
+        precision: 1
+      - name: "Modbus Proxon Temperatur Gast"
+        unique_id: modbus_proxon_temp_gast
+        input_type: input
+        slave: 41
+        address: 602
+        scan_interval: 30
+        device_class: temperature
+        state_class: measurement
+        unit_of_measurement: °C
+        data_type: int16
+        scale: 0.1
+        precision: 1
+      - name: "Modbus Proxon Standzeit Filter"
+        unique_id: modbus_proxon_standzeit_filter
+        scan_interval: 30
+        slave: 41
+        address: 468
+        input_type: holding
+        unit_of_measurement: std
+        data_type: uint16
+      - name: "Modbus Proxon Nutzzeit Filter"
+        unique_id: modbus_proxon_nutzzeit_filter
+        scan_interval: 30
+        slave: 41
+        address: 469
+        input_type: holding
+        unit_of_measurement: std
+        data_type: uint16
