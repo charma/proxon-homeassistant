@@ -1,4 +1,4 @@
-# Proxon Home Assistant Integration guide (WIP Version 0.1)
+# Proxon Home Assistant Integration guide (Version 0.1)
 Full integration guide of Proxon heat pump into Home Assistant
 
 Tested with:
@@ -24,3 +24,7 @@ Prerequisits: Modbus-TCP-Adapter (RS485 to Ethernet)
    You can use example snipped [modbus.yml](./modbus.yml) to extend your Home Assistant's "configuration.yml"
    Update the IP address to your local settings.
    Change/update/add example rooms to your actual settings.
+
+## Hints
+I have tested this with my local setup only. Feel free to share your feedback with your hardware/software used.
+If you have suggestions or questions, use github features for any request.
