@@ -21,6 +21,6 @@ Prerequisits: Modbus-TCP-Adapter (RS485 to Ethernet)
 2. In your router configure a static IP address for your adapter using its mac-address
    (if you router is not capable to reserve IPs for local devices you can try to use IP Mode "static" instead of "DHCP" but this can lead to issues
 4. Configure Home Assistant
-   You can use example snipped modbus.yml to extend your Home Assistant's "configuration.yml"
+   You can use example snipped [modbus.yml](./modbus.yml) to extend your Home Assistant's "configuration.yml"
    Update the IP address to your local settings.
    Change/update/add example rooms to your actual settings.
